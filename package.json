@@ -1,0 +1,24 @@
+{
+  "name": "crystalclearsolutions",
+  "version": "1.0.0",
+  "description": "Crystal Clear Solutions is a window cleaning company based in Long Beach, run by college students",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Diegocuadros1/CrystalClearSolutions"
+  },
+  "author": "Diego Cuadros",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "mongoose": "^8.1.1",
+    "nodemon": "^3.0.3"
+  }
+}
