@@ -5,8 +5,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 
 //Components
-import Navbar from "./components/Navbar";
-import Homepage from "./components/Homepage";
+import Navbar from "./components/layout/Navbar";
+import Homepage from "./components/Homepage/Homepage";
 //AboutUs
 //Book Now
 //Merch Store
@@ -16,7 +16,6 @@ const App = () => {
   return (
     <Router>
       <Fragment>
-        <Navbar />
         <Routes>
           <Route path="/" element={<Homepage />} />
         </Routes>
@@ -24,3 +23,5 @@ const App = () => {
     </Router>
   );
 };
+
+export default App;
