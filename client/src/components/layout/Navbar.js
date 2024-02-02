@@ -5,7 +5,6 @@ import NavbarItems from "./NavbarItems";
 const Navbar = () => {
   return (
     <div className="navbar">
-      <NavbarItems />
       <div className="nav-bottom">
         <div>
           <Link to="/">
