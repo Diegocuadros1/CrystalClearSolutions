@@ -1,9 +1,8 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Navbar from "../layout/Navbar";
 import Services from "./Services";
 import ConnectForm from "./ConnectForm";
 import Footer from "../layout/Footer";
-import NavbarItems from "../layout/NavbarItems";
 
 const Homepage = () => {
   return (

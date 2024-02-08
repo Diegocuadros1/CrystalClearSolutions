@@ -21,6 +21,7 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
 
+    console.log("TESTING 1");
     //pulling out inputs
     const { name, email, address, message } = req.body;
 
@@ -43,6 +44,8 @@ router.post(
         },
       });
 
+      console.log("TESTING 2");
+
       const mailOptions = {
         from: email,
         to: ["cuadrosda21@gmail.com", "diego@crystalclearsolutions.co"],
@@ -51,6 +54,8 @@ router.post(
                 <p> Name: ${name} </p>
                 <p>Message: ${message}</p>`,
       };
+
+      console.log("TESTING 3");
 
       transporter.sendMail(mailOptions, (error, info) => {
         if (error) {

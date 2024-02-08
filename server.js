@@ -1,9 +1,12 @@
 const express = require("express");
+const cors = require("cors");
 
 const app = express();
 
 // Init middleware | gets the res.body
 app.use(express.json({ extended: false }));
+
+app.use(cors());
 
 app.get("/", (req, res) => res.send("API running"));
 

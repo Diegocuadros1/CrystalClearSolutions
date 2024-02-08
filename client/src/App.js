@@ -13,17 +13,20 @@ import Navbar from "./components/layout/Navbar";
 import Homepage from "./components/Homepage/Homepage";
 import Footer from "./components/layout/Footer";
 import NavbarItems from "./components/layout/NavbarItems";
+import Alert from "./components/layout/Alert";
 //AboutUs
 //Book Now
 //Merch Store
 //Footer
 
+// store={store}
 const App = () => {
   return (
     <Provider store={store}>
       <Router>
         <Fragment>
           <NavbarItems />
+          <Alert />
           <Routes>
             <Route path="/" element={<Homepage />} />
           </Routes>

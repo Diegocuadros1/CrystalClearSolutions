@@ -1,11 +1,11 @@
 import axios from "axios";
 import { setAlert } from "./alerts";
-import { SEND_EMAIL } from "./types";
-import { response } from "express";
+import { URL } from "../info";
 
 export const sendEmail =
   (formData, edit = false) =>
   async (dispatch) => {
+    console.log(JSON.stringify(formData));
     try {
       //setting header
       const config = {
@@ -14,12 +14,20 @@ export const sendEmail =
         },
       };
 
+      console.log("testing 1");
+
       //sending email from backend
-      const res = await axios.post("/api/connect", formData, config);
+      await axios.post(`${URL}/api/connect`, formData, config);
+
+      console.log("TESTING 2");
 
       dispatch(setAlert("Message has been sent!", "success"));
+
+      console.log("testing 3");
     } catch (err) {
       const errors = err.response.data.errors;
+
+      console.log(err.response);
 
       //show error inputed
       if (errors) {

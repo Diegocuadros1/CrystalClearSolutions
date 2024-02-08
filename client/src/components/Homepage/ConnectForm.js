@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import { sendEmail } from "../../actions/SendEmail";
+import { sendEmail } from "../../actions/sendEmail";
 import { connect } from "react-redux";
 
 const ConnectForm = ({ sendEmail }) => {
@@ -20,14 +20,16 @@ const ConnectForm = ({ sendEmail }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+    // setAlert("Form Submitted", "success");
     sendEmail(formData);
   };
 
   return (
     <div className="home-form">
       <div className="form-area">
-        <form className="connect-form">
+        <form className="connect-form" onSubmit={(e) => onSubmit(e)}>
           <input
+            className="input"
             type="text"
             placeholder="Name"
             name="name"
@@ -36,6 +38,7 @@ const ConnectForm = ({ sendEmail }) => {
             onChange={(e) => onChange(e)}
           />
           <input
+            className="input"
             type="text"
             placeholder="email"
             name="email"
@@ -44,6 +47,7 @@ const ConnectForm = ({ sendEmail }) => {
             onChange={(e) => onChange(e)}
           />
           <input
+            className="input"
             type="text"
             placeholder="Home Address / City or Zip"
             name="address"
@@ -57,9 +61,7 @@ const ConnectForm = ({ sendEmail }) => {
             value={message}
             onChange={(e) => onChange(e)}
           ></textarea>
-          <button type="submit" onSubmit={(e) => onSubmit(e)} className="btn">
-            Connect With Us!!
-          </button>
+          <input type="submit" className="btn" value="Connect with Us!!" />
         </form>
       </div>
       <div className="form-desc">

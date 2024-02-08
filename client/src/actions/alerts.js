@@ -26,3 +26,10 @@ export const setAlert =
       timeout
     ); //5000 = 5 seconds
   };
+
+export const removeAlert = (alertId) => (dispatch) => {
+  dispatch({
+    type: REMOVE_ALERT,
+    payload: alertId,
+  });
+};
