@@ -14,6 +14,7 @@ import Homepage from "./components/Homepage/Homepage";
 import Footer from "./components/layout/Footer";
 import NavbarItems from "./components/layout/NavbarItems";
 import Alert from "./components/layout/Alert";
+import About from "./components/About/About";
 //AboutUs
 //Book Now
 //Merch Store
@@ -29,6 +30,7 @@ const App = () => {
           <Alert />
           <Routes>
             <Route path="/" element={<Homepage />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </Fragment>
       </Router>
