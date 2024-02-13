@@ -436,8 +436,91 @@ ul {
     height: 50rem;
 }
 
+/* Book Now */
+.booknow {
+    background: url(./img/booknowbackground.png) no-repeat center center/cover;
+}
 
+.book-form {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+}
 
+.name-email {
+    display: flex;
+    justify-content: space-between;
+}
+
+.date-time {
+    display: flex;
+    flex-direction: column;
+}
+
+.date-time input {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.date-time p {
+    text-align: center;
+    border-bottom: #333 solid 2px;
+}
+
+.location-message {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.location {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10rem;
+    text-align: center;
+}
+
+.location p {
+    border-bottom: #333 solid 2px;
+}
+
+.location input {
+    margin-top: 2rem;
+    margin-bottom: 0px;
+}
+
+.message {
+    margin-left: 4rem;
+    text-align: center;
+}
+
+.message p {
+    border-bottom: #333 solid 2px;
+}
+
+.form-input {
+    width: 15rem;
+    height: 2rem;
+    margin: 2.5rem 4rem;
+    padding-left: 10px;
+}
+
+.textarea {
+    margin-top: 20px;
+width: 100%;
+height: 6rem;
+padding: 10px;
+}
+
+.btn-book {
+    width: 25%;
+}
+
+.btn-book:hover {
+    width: 30%;
+}
 
 /* Footer */
 .footer {
@@ -446,7 +529,6 @@ ul {
     justify-content: space-between;
     background-color: #C0E4FA;
     align-items: center;
-    margin-top: 2rem;
 }
 
 .footer-name {

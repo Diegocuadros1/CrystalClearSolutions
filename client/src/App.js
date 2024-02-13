@@ -9,12 +9,11 @@ import { Provider } from "react-redux";
 import store from "./store";
 
 //Components
-import Navbar from "./components/layout/Navbar";
 import Homepage from "./components/Homepage/Homepage";
-import Footer from "./components/layout/Footer";
 import NavbarItems from "./components/layout/NavbarItems";
 import Alert from "./components/layout/Alert";
 import About from "./components/About/About";
+import BookNow from "./components/BookNow/BookNow";
 //AboutUs
 //Book Now
 //Merch Store
@@ -31,6 +30,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/about" element={<About />} />
+            <Route path="/book" element={<BookNow />} />
           </Routes>
         </Fragment>
       </Router>
