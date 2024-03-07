@@ -29,7 +29,7 @@ const About = () => {
         <li>
           {" "}
           <Link to="#whatweare" onClick={() => scroll(whatWeAre)}>
-            What We Are
+            Who We Are
           </Link>
         </li>
         <li>

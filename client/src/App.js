@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 //Importing CSS
@@ -14,12 +14,8 @@ import NavbarItems from "./components/layout/NavbarItems";
 import Alert from "./components/layout/Alert";
 import About from "./components/About/About";
 import BookNow from "./components/BookNow/BookNow";
-//AboutUs
-//Book Now
-//Merch Store
-//Footer
+import MerchStore from "./components/MerchStore/MerchStore";
 
-// store={store}
 const App = () => {
   return (
     <Provider store={store}>
@@ -31,6 +27,7 @@ const App = () => {
             <Route path="/" element={<Homepage />} />
             <Route path="/about" element={<About />} />
             <Route path="/book" element={<BookNow />} />
+            <Route path="/store" element={<MerchStore />} />
           </Routes>
         </Fragment>
       </Router>

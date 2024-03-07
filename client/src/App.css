@@ -186,7 +186,7 @@ ul {
 }
 
 .intro-p {
-    width: 40rem;
+    width: 60%;
     text-align: center;
     background-color: rgba(172, 227, 249, 0.5);
     border: #333 solid 1px;
@@ -466,7 +466,14 @@ ul {
 
 .date-time p {
     text-align: center;
+}
+
+.par {
     border-bottom: #333 solid 2px;
+}
+
+.par i {
+    font-size: 13px;
 }
 
 .location-message {
@@ -522,6 +529,23 @@ padding: 10px;
     width: 30%;
 }
 
+/* Merch Store */
+
+.merch-store {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(./img/merch-background.png) no-repeat center center/cover;
+}
+
+.merch-store h1 {
+    font-size: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 40px;
+    padding: 0 20px;
+}
+
 /* Footer */
 .footer {
     display: flex;
@@ -548,3 +572,42 @@ padding: 10px;
     
 }
 
+
+/* Phone version */
+@media only screen and (max-width: 768px) {
+    /* Navbar */
+    .nav-bottom {
+        display: none;
+    }
+
+    .phone-nav {
+        display: flex;
+        justify-content: space-between;
+        height: 3rem;
+        align-items: center;
+    }
+
+    .phone-nav .logo {
+        width: 4rem;
+        height:4rem;
+        margin-top: 30px;
+    }
+
+    .hamburger-menu {
+        width: 3rem;
+        height: 3rem;
+        margin-top: 30px;
+        background: url(./img/hamburger-menu-1.png) no-repeat center center/cover;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* homepage */
+    .homepage-start {
+        height: 120vh;
+    }
+    /* services */
+    .services-box {
+        flex-direction: column;
+    }
+}

@@ -7,7 +7,7 @@ const WhatWeAre = () => {
   return (
     <Fragment>
       <div className="text-area">
-        <h1>What We Are</h1>
+        <h1>Who We Are</h1>
         <p style={indent}>
           {" "}
           Crystal Clear Solutions is more than just a window cleaning company;

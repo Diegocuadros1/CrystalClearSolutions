@@ -28,3 +28,35 @@ export const sendEmail =
       }
     }
   };
+
+export const sendBookEmail =
+  (formData, edit = false) =>
+  async (dispatch) => {
+    try {
+      //setting header
+      const config = {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
+
+      //sending the email from the backend
+      await axios.post(`${URL}/api/connect/book`, formData, config);
+
+      dispatch(
+        setAlert(
+          "You have been booked! If any complications will occur, we will promptly email you",
+          "success"
+        )
+      );
+    } catch (err) {
+      const errors = err.response.data.errors;
+
+      console.log(err.response);
+
+      //show error inputed
+      if (errors) {
+        errors.forEach((error) => dispatch(setAlert(error.msg, "danger")));
+      }
+    }
+  };
