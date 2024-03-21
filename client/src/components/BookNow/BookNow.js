@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import Navbar from "../layout/Navbar";
@@ -15,6 +15,10 @@ const BookNow = ({ sendBookEmail }) => {
     zip: "",
     message: "",
   });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const { name, email, date, time, address, zip, message } = formData;
 

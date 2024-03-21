@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../layout/Navbar";
 import Footer from "../layout/Footer";
@@ -20,6 +20,10 @@ const About = () => {
   const scroll = (ref) => {
     ref.current.scrollIntoView({ behavior: "smooth" });
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="about">
@@ -60,16 +64,16 @@ const About = () => {
       <section ref={whatWeAre} className="section">
         <WhatWeAre />
       </section>
-      <section ref={ourMission} className="section">
+      <section ref={ourMission} className="section section-2">
         <OurMission />
       </section>
       <section ref={whyUs} className="section">
         <WhyUs />
       </section>
-      <section ref={thePoint} className="section">
+      <section ref={thePoint} className="section section-2">
         <ThePoint />
       </section>
-      <section ref={waterFedPole} className="section">
+      <section ref={waterFedPole} className="section section-2">
         <WaterFedPole />
       </section>
       <Footer />

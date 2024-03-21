@@ -40,7 +40,7 @@ const ConnectForm = ({ sendEmail }) => {
           <input
             className="input"
             type="text"
-            placeholder="email"
+            placeholder="Email"
             name="email"
             required
             value={email}

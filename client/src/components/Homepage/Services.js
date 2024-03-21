@@ -1,6 +1,7 @@
 import React from "react";
 
 const Services = () => {
+
   return (
     <>
       <p className="title-services">Our Services</p>
@@ -11,7 +12,7 @@ const Services = () => {
           <p>
             Meticulous solar panel cleaning to enhance the efficiency and
             lifespan of your solar energy system
-          </p>
+          </p>  
         </div>
         <div className="services s-2">
           <h4>Window Cleaning</h4>
